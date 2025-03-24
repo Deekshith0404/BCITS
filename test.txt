@@ -1,0 +1,269 @@
+1.create table Employee
+(id int primary_key,
+name varchar(50) not null,
+age int,
+joiningdate date);
+
+alter table Employee add column salary varchar(50);
+
+
+
+2.if(tempData.exist){
+	delete table TempData;
+}
+
+
+
+3.create table Products (
+productId int primary_key not null,
+productname varchar(50) not null,
+price decimal );
+
+4.alter table 'oldorder' new 'ArchiverOrder';
+
+5.alter table Inventory add column index int;
+
+6.insert into students(id int,name varchar(30),age int,grade varchar(10))values(10,Alice,20,A,);
+
+
+7.update table Studens set grade=b where marks<60;
+
+8.delete from table where status ==  'cancelled';
+
+9.insert into 
+
+10.we can load the data from a csv file to data base using jdbc or jpa as csv file are seperater by ',' so using it we can 
+	just use the data access the first line and use seperaterBy(",") as it seperates we can add the word to a string 
+and then add the to table using jdbc like add it to colums one by one
+
+11.select name from Employee where joiningdate > 2020-01-01;
+
+
+12.select 	avg(emp_salary) ,minimum(emp_salary) and max(emp_salary) form Employee;
+
+13.select orders from OrderTable where OrderAmount>1000 & status=="delivered"
+
+14.select count(*) from sales group by category;
+
+
+15.select name,orders from sales order=="placed" ;
+
+
+16.select name,order from customers as c Orders as o where c_id=o_id;
+
+17.select customer,orders from customer as c Prders as o;
+
+18.select name from employess where avg(salary)<salary;
+
+
+19.select orders from Orders where avg(price)<price;
+
+20.select name ,order,products from Costomer as c Orders as o where c_id=o_id;
+
+21.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26.Orm stand for object relational mapping this are tools used with the jpa which maintains  a industry standars so to support jpa
+	orm tools are used some of them are:hibernate,ibaties which are 
+	Architecture:
+	configuration
+	session factory.
+	session
+	query
+	
+	
+27.	
+
+28.@Entity it is used in entity class to mark it as an  entity.
+	EntityTransaction -there are 3 methods in it they are begin,commit,roolback which  controlls the commitments
+	@one to many-where we make one entity class and use the object of it to other clas where single record in database is related
+		to multipe datas
+	@one to one where we create a single entity which is connected to a single database@
+	@Manyto one:in which many entity are inter connected to each other and can database we are able to access all the data
+
+
+
+29.java persistence query lanquage where we write the modified query which  are not available in it for example search by name query
+	which we should be writing it inly provide a few in built other than that we should write
+
+30.select min(p.price) from product p;
+
+31.EntityManagerFactory emf=Persistence.createEntityMnager("class name")
+    EntityManager em=emf.createEntityManager
+	em.begin
+	em.persistence
+	em.commit;
+	em.close
+
+32.load and register
+	establish connection 
+	create statement 
+	execute the query 
+	process the result 
+	close the connection;
+	
+	Class.Forname()
+	Connection connection=DriverManager.getname(Driver)
+	Statement statement connection.createStaement();
+	
+	
+	
+33. b.Encapsulation:covering the odject and behaviour in same class
+	ex:class hello(){
+		private int id;
+		private String name;
+		
+		
+		getter and setter method for both variables
+		
+	}
+	
+	c.inheritence : where the child class inherits the methods and variables from the parent class
+	
+	class hi{
+		public void heee(){
+			
+		}
+	}
+	
+	class helloc extends hi(){
+		
+		public void hello(){
+			
+		}
+	}
+	
+	d.abstraction is make a class abstract and implement it in other class and override it and use it without knowing 
+		featuers
+		class hi{
+		public abstract void heee();
+	}
+	
+	class helloc implement hi{
+		
+		@override
+		public void heee(){
+			
+		}
+	}
+	
+	e.thow is used to throw an exception error where throws is used to make it deligate and let other class handle the error
+	
+	public void hi(){
+		throw QueryException
+	}
+	
+	public static void main() throw SqlException{
+		
+	}
+	
+34.a equals() it is used to compare to string variable can also override the method and add other conditions
+			== is used to compare two values for ex:2==2 which gives a boolean result
+	b.final keyword is used to make a variable value fixed which cannot be changed again 
+		finally is used in method by which the method cannot be overriden can only be used normally
+		
+	c. implement is used implemegt the abstract method which is written in an interface 
+		extends is used to access the methods and variable of the parent class
+	d.checked exception are compile time exceotion which needs to be handled while compiling 
+		unchecked exception -are runtime exception which occur when the program is running
+	e.methods are logins written inside the class which can be used else where  
+		constructer- is a special method which has same name as the class name
+	f.treemap-it stores the value in the format of key and value 
+		hashmap-checks the hash code of the value and then adds to it.
+		LinkedHashMap-holds the address of both previous and next node with no same data as it checks hashcode before adding
+	g.@EnableWebMvc is used to make the project as web base project
+		@Configuration it is written in configuration class to let the bean factory know that it is config class.
+	
+	
+	35.incorrect loop 
+		compilation error
+	
+	36.a=10 b=15
+	
+	37.cannot access the variable 
+	
+	38.true
+	
+	39.
+	
+	40.true
+	
+	41.4
+	
+	42.
+	
+	43.yes it will
+	
+	44.we can create parametarized constructer using autowired for field it helps to acces the values;
+	
+	45.we can diferenciate it by giving the name for bean or the first class will be accessed
+	
+	46.class not found 404 error
+	
+	47.@AutoWired
+		Serviceclass sclass;
+	
+	RequestMapping("/email/{email}")
+	public String emailvali(@Pathvariable String email){
+		Boolean result=sclass.emailcheck(email)
+		if(result){
+			model.addAttribute("resuklt","email is available ")
+		}else{
+		model.addAttribute("result","emmail not exist")
+	}
+	return index.jsp
+	}
+	49.0(n)
+	
+	50.
+	
+	int i=1;
+	int j=1;
+	for(i=1,i<5;i++)
+		
+	
+	54.dispatcher servlet is the main component of spring mvc which has controll over all other components 
+		the result from the component is first send to dispatcher then again goes to other component
+		
+	55.we basically use view resolver which helps us to directly return the page without the extention
+	
+	56.@configuration is used above confikgure class to make it visible to bean
+		@Bean is same as component which  creates an instance
+		depedency injection - autowired is used so there is no need for object creation to it directly access the methods in it
+		ioc -inversion of controller is the main part of spring mvc
+		
+	
+	57.
+	int i=1;
+	do while(true){
+		System.out.println(i++)
+		if(i==100){
+		break;
+		}
+	}
+	
+	
+	59.
+	
+	<c:
+	forEach var =${list} item="items"{
+		${items}
+	
+	}
+	forEach	
+	:/c>		
+	
+	
